@@ -1,0 +1,106 @@
+{
+	"info": {
+		"_postman_id": "7de34d26-553a-4a71-be91-b22462e0fe99",
+		"name": "Box-React",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "boxes-store",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"title\":\"teste\"\n}"
+				},
+				"url": {
+					"raw": "{{host}}/boxes",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"boxes"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "boxes view",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{host}}/boxes/5cdcc793620f164d4e3fe9d5",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"boxes",
+						"5cdcc793620f164d4e3fe9d5"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "boxes store file",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "file",
+							"type": "file",
+							"src": "/home/edeno/Imagens/Screenshot_2019-03-29-08-34-10-951_com.android.chrome.jpg"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{host}}/boxes/5cdcc793620f164d4e3fe9d5/files",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"boxes",
+						"5cdcc793620f164d4e3fe9d5",
+						"files"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"variable": [
+		{
+			"id": "9d3d4442-6273-41c8-a2c1-9b965135c770",
+			"key": "host",
+			"value": "http://localhost:3333",
+			"type": "string"
+		}
+	]
+}
