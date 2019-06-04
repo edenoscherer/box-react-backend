@@ -4,8 +4,11 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "dev": "nodemon --watch \"src/\" --exec \"ts-node src/server.ts\" -e ts",
-    "start": "node src/server.js"
+    "build-ts": "tsc",
+    "postinstall": "npm run build-ts",
+    "start": "npm run serve",
+    "serve": "node dist/server.js",
+    "dev": "nodemon --watch \"src/\" --exec \"ts-node src/server.ts\" -e ts"
   },
   "dependencies": {
     "cors": "^2.8.5",
